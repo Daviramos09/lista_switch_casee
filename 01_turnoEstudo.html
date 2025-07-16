@@ -13,10 +13,24 @@
     */
 
     //ENTRADA
-    
+    const mensagem = prompt(`informe o turno que você estuda (M-matutino ou V-Vespertino ou N- Noturno)`)
     
     //PROCESSAMENTO
-
+    switch (mensagem) {
+        case "M":
+            alert(`"Bom Dia!"`)
+            break;
+             case "V":
+            alert(`"Boa Tarde"`)
+            break;
+             case "N":
+            alert(`"Boa noite"`)
+            break;
+    
+        default:
+            alert(`informe um valor valido`)
+            break;
+    }
     
     //SAÍDA
 
