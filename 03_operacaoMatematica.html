@@ -9,10 +9,57 @@
     */
 
     //ENTRADA
-
-
+    const numero1 = Number(prompt(`informe um numero`));
+    const numero2 = Number(prompt(`informe um numero`));
+    const operacao = Number(prompt(`informe a operação que deseja fazer (+ - / *)`));
     //PROCESSAMENTO
-
+    let resultado
+    let inteiroDecimal
+    let positivoNegativo
+    let parImpar
+    switch (operacao) {
+        case "+":
+            resultado = numero1 + numero2
+            case "-" :
+                resultado = numero1 - numero2
+                case "/" :
+                    resultado = numero1 / numero2
+                    break
+                    case "*" :
+                    resultado = numero1 * numero2
+            break;
+        default:
+            alert(`informe valores validos`);
+            break;
+    }
+    switch (Number.isInteger(resultado)){
+        case true:
+            inteiroDecimal = "o numero é inteiro"
+            break;
+    
+        default:
+            inteiroDecimal = "o numero é decimal"
+            break;
+    }
+    switch (resultado > 0) {
+        case true:
+            positivoNegativo = "o numero é posivo"
+            break;
+    
+        default:
+            positivoNegativo = "o numero é negativo"
+            break;
+    }
+    switch (resultado % 2 === 0) {
+        case true:
+            parImpar = "o numero é par"
+            break;
+    
+        default:
+            parImpar = "o numero é impar"
+            break;
+    }
+    document.write(`o resultado da operação é ${resultado} e é um numero ${inteiroDecimal} ${positivoNegativo} ${parImpar}`);
     
     //SAÍDA
 

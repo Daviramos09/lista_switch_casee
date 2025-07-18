@@ -10,10 +10,29 @@
     */
 
     // ENTRADA
-
+    const idade = Number(prompt(`informe a idade do seu cão`));
+    const porteCao = Number(prompt(`informe o pote do seu cão usando "G" "M" "P"`));
     
     // PROCESSAMENTO
+    let idadeFinal
+    switch (porteCao) {
+        case "G":
+            idadeFinal = idade * 7
+            alert(`a idade do cão é de ${idadeFinal}`);
+            break;
+            case "M":
+                idadeFinal = idade * 6
+                 alert(`a idade do cão é de ${idadeFinal}`);
+           break
+           case "P":
+            idadeFinal = idade * 5
+            alert(`a idade do cão é de ${idadeFinal}`);
 
+           break
+        default:
+            alert(`informe um valor valido`)
+            break;
+    }
     
     // SAÍDA
 

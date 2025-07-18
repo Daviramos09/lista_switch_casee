@@ -6,10 +6,18 @@
     */
 
     // ENTRADA
-
+    const letra = prompt(`Informe uma letra`);
     
     // PROCESSAMENTO
-
+   switch (letra) {
+    case "A" | "a"| "E" | "e" | "I" | "i" | "O" | "o" | "U" | "u":
+        alert(`é vogal`);
+        break;
+   
+    default:
+        alert(`Não é vogal`);
+        break;
+   }
     
     // SAÍDA
 
