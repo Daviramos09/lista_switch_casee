@@ -38,7 +38,6 @@
 
     switch (resultado !== undefined) {
         case true:
-            // Inteiro ou decimal
             switch (Number.isInteger(resultado)) {
                 case true:
                     inteiroDecimal = "inteiro";
@@ -47,7 +46,6 @@
                     inteiroDecimal = "decimal";
                     break;
             }
-            // Positivo ou negativo
             switch (Math.sign(resultado)) {
                 case 1:
                     positivoNegativo = "positivo";
@@ -59,7 +57,6 @@
                     positivoNegativo = "zero";
                     break;
             }
-            // Par ou ímpar
             switch (resultado % 2 === 0) {
                 case true:
                     parImpar = "par";
