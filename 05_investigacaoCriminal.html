@@ -23,15 +23,33 @@
     
     //PROCESSAMENTO
     let respostas
-    switch () {
-        case value:
-            
+    respostas = [telefone, local, moraPerto, devia, trabalhou];
+
+    let positivas = 0;
+    respostas.forEach(resposta => {
+        if (resposta && resposta === "sim") {
+            positivas++;
+        }
+    });
+
+    let classificacao;
+    switch (positivas) {
+        case 2:
+            classificacao = "Suspeita";
             break;
-    
+        case 3:
+        case 4:
+            classificacao = "Cúmplice";
+            break;
+        case 5:
+            classificacao = "Assassino";
+            break;
         default:
+            classificacao = "Inocente";
             break;
     }
 
-    //SAÍDA
+    // SAÍDA
+    alert("Classificação: " + classificacao);
 
 </script>
